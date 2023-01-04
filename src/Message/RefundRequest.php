@@ -45,7 +45,7 @@ class RefundRequest extends AbstractRestRequest
         // Australian dollars.
         $this->validate('amount', 'transactionReference');
         $data = array(
-            'amount'         => $this->getAmount(),
+            'amount'         => $this->getAmountInteger(),
             'transaction_id' => $this->getTransactionReference(),
             'reference'      => $this->getTransactionReference() . '-REFUND',
         );
